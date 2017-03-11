@@ -1,0 +1,23 @@
+@import 'mixins';
+
+$backgorundColor: #ecf0f1;
+$linkBackgroundColor: #2980b9;
+.menu{
+    width:100%;
+    background-color: $backgorundColor;
+    height:50px;
+    line-height: 45px;
+    padding: 5px;
+    @include border-radius(2px);
+
+    &__link{
+        background-color: $linkBackgroundColor;
+        padding:10px;
+        color:white;
+        vertical-align: middle;
+        text-decoration: none;
+        margin: 5px;
+        @include border-radius(5px);
+    }
+
+}

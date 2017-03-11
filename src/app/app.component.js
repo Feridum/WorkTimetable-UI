@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router'
-//styles
+
+import Menu from './routes/Shared/menu.component'
+import Footer from './routes/Shared/footer.component'
 import './app.scss';
 
 class App extends Component {
   render() {
     return (
-      <div> Menu & Layout
-        Menu
-        <div>
-          <Link to="/">Kalendarz</Link>
-          <Link to="/settings">Ustawienia</Link>
+      <div className="container-fluid">
+        <Menu />
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="box body">
+              {this.props.children}
+            </div>
+          </div>
         </div>
-        {this.props.children}
+      <Footer />
       </div>
     );
   }
