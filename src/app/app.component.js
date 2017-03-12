@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Menu from './routes/Shared/menu.component'
 import Footer from './routes/Shared/footer.component'
+import 'flexboxgrid/dist/flexboxgrid.min.css'
 import './app.scss';
 
 class App extends Component {
