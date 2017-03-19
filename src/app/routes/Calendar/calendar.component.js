@@ -6,13 +6,15 @@ import './calendar.scss'
 BigCalendar.momentLocalizer(moment);
 
 class Calendar extends Component {
+    constructor(state){
+        super();
+        let calendar = state.calendar;
+    }
     render() {
         return (
             <div className="calendar">
                 <BigCalendar
                     events={[]}
-                    startAccessor='startDate'
-                    endAccessor='endDate'
                 />
             </div>
         )
