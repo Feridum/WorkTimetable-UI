@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Calendar from './calendar.component'
-
+import { addEvent } from '../../actions/calendar.actions'
 const mapStateToProps = (state) => {
   return {
     calendar: state.calendar
@@ -8,7 +8,9 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {}
+  return {
+    onAddEvent: (newEvent) => { dispatch(addEvent(newEvent)) },
+  }
 }
 
 const CalendarContainer = connect(
