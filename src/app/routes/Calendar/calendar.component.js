@@ -15,7 +15,6 @@ class Calendar extends Component {
     }
 
     onViewChange = (event) => {
-        console.log(event, event !== 'week', this.refs.calendar)
         if (event === 'week') {
            this.setState({selectable:true})
         } else {
