@@ -14,6 +14,11 @@ class Calendar extends Component {
         }
     }
 
+componentWillMount(){
+    console.log('willMount')
+    console.log(this.props)
+    this.props.getEvents();
+}
     onViewChange = (event) => {
         if (event === 'week') {
            this.setState({selectable:true})
@@ -24,7 +29,8 @@ class Calendar extends Component {
     };
 
     render() {
-        const { calendar, onAddEvent } = this.props;
+        const { calendar, onAddEvent } = this.props
+        console.log(calendar)
         return (
             <div className="calendar">
                 <BigCalendar
@@ -32,7 +38,7 @@ class Calendar extends Component {
                     selectable={this.state.selectable}
                     defaultView='week'
                     onView={this.onViewChange}
-                    events={calendar}
+                    events={calendar.events}
                     onSelectSlot={(event) => onAddEvent(event)}
                 />
             </div>
