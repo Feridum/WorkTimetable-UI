@@ -4,6 +4,8 @@ Aplikacja, której celem będzie ewidencjonowanie czasu pracy
 
 [Aktualny wygląd aplikacji](https://feridum.github.io/WorkTimetable-UI/#/)
 
+[Część backendowa aplikacji](https://github.com/Feridum/WorkTimetable-Backend)
+
 ### Do zrobienia
 
 - [x] inicjalizacja projektu 
